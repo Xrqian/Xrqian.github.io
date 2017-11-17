@@ -41,8 +41,8 @@
 	display: block;
 	position: relative;
 	overflow: hidden;
-	border: 1px solid #87daff;
-	background: rgb(98, 160, 240);
+	border: 1px solid #222;
+	background: #111;
 	outline: none;
 }
 
