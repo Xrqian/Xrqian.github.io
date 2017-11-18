@@ -391,43 +391,16 @@
       
         
           
-            <h3 id="brew-简单操作命令"><a href="#brew-简单操作命令" class="headerlink" title="brew 简单操作命令"></a>brew 简单操作命令</h3><blockquote>
-<p>安装 vim：  brew install vim  \<br>查看 brew 可升级应用：brew outdated  \<br>查看 brew 安装的应用版本： brew list —versions  \<br>brew 安装的文件默认安装到/usr/local/bin/下 \<br>设置 brew 安装的 vim 为默认vim: \<br>alias vim=’/usr/local/bin/vim’</p>
-</blockquote>
-<hr>
-<h3 id="Windows-查看进程详情"><a href="#Windows-查看进程详情" class="headerlink" title="Windows 查看进程详情"></a>Windows 查看进程详情</h3><blockquote>
-<p>原问题是 想看不同的 Python.exe 运行的是具体哪个脚本。 \<br>在任务管理器加一列。Command Line。</p>
-</blockquote>
-<hr>
-<h3 id="zsh-配置文件"><a href="#zsh-配置文件" class="headerlink" title="zsh 配置文件"></a>zsh 配置文件</h3><blockquote>
-<p>之前在 bash_profile 中修改了环境变量 但是 总是不生效 需要每次都 source 一下 \<br>因为 bash_profile 是 bash 的配置文件,修改了下 zsh 的配置文件,让 zsh 加载 bash的配置文件就好了 \<br>vim ~/.zshrc \<br>加上: \<br>source ~/.bash_profile \<br>就可以了 \</p>
-</blockquote>
-<hr>
-<h3 id="mac-强制退出"><a href="#mac-强制退出" class="headerlink" title="mac 强制退出"></a>mac 强制退出</h3><blockquote>
-<p>command + Option + Esc</p>
-</blockquote>
-<hr>
-<h3 id="设置服务器免密登录"><a href="#设置服务器免密登录" class="headerlink" title="设置服务器免密登录"></a>设置服务器免密登录</h3><blockquote>
-<p>ssh-copy-id -p [port] [username]@[host] \<br>执行完此步之后会让你输入密码 输入后即可把自己的公钥上传到服务器 实现免密登录 </p>
-</blockquote>
-<hr>
-<h3 id="查看端口号-列出进程-id"><a href="#查看端口号-列出进程-id" class="headerlink" title="查看端口号 列出进程 id"></a>查看端口号 列出进程 id</h3><blockquote>
-<p>lsof -i:8000 </p>
-</blockquote>
-<h3 id="查询文件所在的位置"><a href="#查询文件所在的位置" class="headerlink" title="查询文件所在的位置"></a>查询文件所在的位置</h3><blockquote>
-<p>find / -name filename</p>
-</blockquote>
-<hr>
-<h3 id="git-撤销提交"><a href="#git-撤销提交" class="headerlink" title="git 撤销提交"></a>git 撤销提交</h3><blockquote>
-<p>git reset HEAD^ \<br>git push origin dev -f </p>
-</blockquote>
-<hr>
-<h3 id="mongodb-导入导出数据"><a href="#mongodb-导入导出数据" class="headerlink" title="mongodb 导入导出数据"></a>mongodb 导入导出数据</h3><blockquote>
-<p>导入数据<br>mongorestore -h 127.0.0.1:27017 -d 数据库名字 文件地址</p>
-<p>导出数据<br>mongodump -h IP -port 端口 -u 用户名 -p 密码 -d 数据库 -o 文件存在路径</p>
-</blockquote>
-
-          
+          brew 简单操作命令
+安装 vim：  brew install vim  \查看 brew 可升级应用：brew outdated  \查看 brew 安装的应用版本： brew list —versions  \brew 安装的文件默认安装到/usr/local/bin/下 \设置 brew 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/18/简单的笔记/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -557,9 +530,16 @@
       
         
           
-            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> (<span class="string">"hello world"</span>)</span><br></pre></td></tr></table></figure>
+          1print ("hello world")
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/16/article/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
