@@ -99,18 +99,18 @@
 
 
 
-<meta name="description" content="trigger 简介 trigger 是 mysql 中的一个触发器,触发器的主要作用是在执行 mysql 之前或者之后来执行一些特定的操作.  作用范围 主要针对的 mysql 操作：insert、update、delete. \触发的时间设定是： before （sql 执行前）、after（sql 执行之后）。">
+<meta name="description" content="trigger 简介 trigger 是 mysql 中的一个触发器,触发器的主要作用是在执行 mysql 之前或者之后来执行一些特定的操作.  作用范围 主要针对的 mysql 操作：insert、update、delete.触发的时间设定是： before （sql 执行前）、after（sql 执行之后）。  ">
 <meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL | trigger">
 <meta property="og:url" content="https://2016428.com/2017/11/18/MySQL之trigger/index.html">
 <meta property="og:site_name" content="Hotel California">
-<meta property="og:description" content="trigger 简介 trigger 是 mysql 中的一个触发器,触发器的主要作用是在执行 mysql 之前或者之后来执行一些特定的操作.  作用范围 主要针对的 mysql 操作：insert、update、delete. \触发的时间设定是： before （sql 执行前）、after（sql 执行之后）。  示例示例语句12345CREATE triggername AFTER IN">
+<meta property="og:description" content="trigger 简介 trigger 是 mysql 中的一个触发器,触发器的主要作用是在执行 mysql 之前或者之后来执行一些特定的操作.  作用范围 主要针对的 mysql 操作：insert、update、delete.触发的时间设定是： before （sql 执行前）、after（sql 执行之后）。  示例示例语句12345CREATE triggername AFTER INSE">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-18T08:54:13.000Z">
+<meta property="og:updated_time" content="2017-11-18T08:58:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL | trigger">
-<meta name="twitter:description" content="trigger 简介 trigger 是 mysql 中的一个触发器,触发器的主要作用是在执行 mysql 之前或者之后来执行一些特定的操作.  作用范围 主要针对的 mysql 操作：insert、update、delete. \触发的时间设定是： before （sql 执行前）、after（sql 执行之后）。  示例示例语句12345CREATE triggername AFTER IN">
+<meta name="twitter:description" content="trigger 简介 trigger 是 mysql 中的一个触发器,触发器的主要作用是在执行 mysql 之前或者之后来执行一些特定的操作.  作用范围 主要针对的 mysql 操作：insert、update、delete.触发的时间设定是： before （sql 执行前）、after（sql 执行之后）。  示例示例语句12345CREATE triggername AFTER INSE">
 
 
 
@@ -390,7 +390,7 @@
 <p>trigger 是 mysql 中的一个触发器,触发器的主要作用是在执行 mysql 之前或者之后来执行一些特定的操作.</p>
 </blockquote>
 <h3 id="作用范围"><a href="#作用范围" class="headerlink" title="作用范围"></a>作用范围</h3><blockquote>
-<p>主要针对的 mysql 操作：insert、update、delete. \<br>触发的时间设定是： before （sql 执行前）、after（sql 执行之后）。</p>
+<p>主要针对的 mysql 操作：insert、update、delete.<br>触发的时间设定是： before （sql 执行前）、after（sql 执行之后）。</p>
 </blockquote>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><h4 id="示例语句"><a href="#示例语句" class="headerlink" title="示例语句"></a>示例语句</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> triggername <span class="keyword">AFTER</span> <span class="keyword">INSERT</span> <span class="keyword">ON</span> tablename <span class="keyword">FOR</span> <span class="keyword">EACH</span> <span class="keyword">ROW</span> </span><br><span class="line"><span class="keyword">BEGIN</span> </span><br><span class="line"><span class="keyword">DECLARE</span> CONTINUE <span class="keyword">HANDLER</span> <span class="keyword">FOR</span> SQLEXCEPTION <span class="keyword">BEGIN</span> <span class="keyword">END</span>;</span><br><span class="line"><span class="keyword">SELECT</span> OLD.id <span class="keyword">FROM</span> tablename；</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
 <h4 id="示例含义"><a href="#示例含义" class="headerlink" title="示例含义"></a>示例含义</h4><p>创建一个 名为triggername的触发器，在tablename表插入数据之后执行，查找原有的 id，作用于每一行操作。<br>并且忽略掉触发器的 sql 错误，也就是触发器与原sql 互不影响。</p>
