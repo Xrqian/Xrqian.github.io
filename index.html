@@ -303,6 +303,172 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://2016428.com/2017/11/18/简单的笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Qian">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hotel California">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/11/18/简单的笔记/" itemprop="url">
+                  简单的笔记
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-18T15:58:44+08:00">
+                2017-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/11/18/简单的笔记/" class="leancloud_visitors" data-flag-title="简单的笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="brew-简单操作命令"><a href="#brew-简单操作命令" class="headerlink" title="brew 简单操作命令"></a>brew 简单操作命令</h3><blockquote>
+<p>安装 vim：  brew install vim  \<br>查看 brew 可升级应用：brew outdated  \<br>查看 brew 安装的应用版本： brew list —versions  \<br>brew 安装的文件默认安装到/usr/local/bin/下 \<br>设置 brew 安装的 vim 为默认vim: \<br>alias vim=’/usr/local/bin/vim’</p>
+</blockquote>
+<hr>
+<h3 id="Windows-查看进程详情"><a href="#Windows-查看进程详情" class="headerlink" title="Windows 查看进程详情"></a>Windows 查看进程详情</h3><blockquote>
+<p>原问题是 想看不同的 Python.exe 运行的是具体哪个脚本。 \<br>在任务管理器加一列。Command Line。</p>
+</blockquote>
+<hr>
+<h3 id="zsh-配置文件"><a href="#zsh-配置文件" class="headerlink" title="zsh 配置文件"></a>zsh 配置文件</h3><blockquote>
+<p>之前在 bash_profile 中修改了环境变量 但是 总是不生效 需要每次都 source 一下 \<br>因为 bash_profile 是 bash 的配置文件,修改了下 zsh 的配置文件,让 zsh 加载 bash的配置文件就好了 \<br>vim ~/.zshrc \<br>加上: \<br>source ~/.bash_profile \<br>就可以了 \</p>
+</blockquote>
+<hr>
+<h3 id="mac-强制退出"><a href="#mac-强制退出" class="headerlink" title="mac 强制退出"></a>mac 强制退出</h3><blockquote>
+<p>command + Option + Esc</p>
+</blockquote>
+<hr>
+<h3 id="设置服务器免密登录"><a href="#设置服务器免密登录" class="headerlink" title="设置服务器免密登录"></a>设置服务器免密登录</h3><blockquote>
+<p>ssh-copy-id -p [port] [username]@[host] \<br>执行完此步之后会让你输入密码 输入后即可把自己的公钥上传到服务器 实现免密登录 </p>
+</blockquote>
+<hr>
+<h3 id="查看端口号-列出进程-id"><a href="#查看端口号-列出进程-id" class="headerlink" title="查看端口号 列出进程 id"></a>查看端口号 列出进程 id</h3><blockquote>
+<p>lsof -i:8000 </p>
+</blockquote>
+<h3 id="查询文件所在的位置"><a href="#查询文件所在的位置" class="headerlink" title="查询文件所在的位置"></a>查询文件所在的位置</h3><blockquote>
+<p>find / -name filename</p>
+</blockquote>
+<hr>
+<h3 id="git-撤销提交"><a href="#git-撤销提交" class="headerlink" title="git 撤销提交"></a>git 撤销提交</h3><blockquote>
+<p>git reset HEAD^ \<br>git push origin dev -f </p>
+</blockquote>
+<hr>
+<h3 id="mongodb-导入导出数据"><a href="#mongodb-导入导出数据" class="headerlink" title="mongodb 导入导出数据"></a>mongodb 导入导出数据</h3><blockquote>
+<p>导入数据<br>mongorestore -h 127.0.0.1:27017 -d 数据库名字 文件地址</p>
+<p>导出数据<br>mongodump -h IP -port 端口 -u 用户名 -p 密码 -d 数据库 -o 文件存在路径</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://2016428.com/2017/11/16/article/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -471,7 +637,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
