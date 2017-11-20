@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title><![CDATA[test]]></title>
+      <url>/2017/11/20/test/</url>
+      <content type="html"><![CDATA[<p>test</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> test </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[mysql-trigger]]></title>
       <url>/2017/11/20/mysql-trigger/</url>
       <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
