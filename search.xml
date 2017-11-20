@@ -86,10 +86,25 @@
     
     <entry>
       <title><![CDATA[The first article]]></title>
-      <url>/2017/11/16/article/</url>
+      <url>/2017/11/16/first/</url>
       <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> (<span class="string">"hello world"</span>)</span><br></pre></td></tr></table></figure>
+<p>之前搭建过一个 blog，主要是看着好看，实用性并不好。</p>
+<p>后来在 csdn 记录，再后来就很少记录了，有一些需要记录的都记在 Notion 或者有道云笔记。</p>
+<p>记在本地笔记的坏处是 总是记得很随意，而写博客能对细碎的知识点重新梳理一下。</p>
+<p>工作之余，用 Hexo + NexT  搭建了这个博客，简介而又功能齐全。</p>
+<p>很久没有写一些随笔感悟之类，社交平台的繁杂导致越來越不愿意表达自己。</p>
+<p>以后有随笔感悟也可以写在这里，反正也没几个人看的。=_=</p>
+<hr>
+<p>不会说话了，就这样吧。</p>
+<p>希望能坚持。</p>
 ]]></content>
       
+        
+        <tags>
+            
+            <tag> others </tag>
+            
+        </tags>
         
     </entry>
     
