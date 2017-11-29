@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Qian" />
+  <meta name="keywords" content="mysql," />
 
 
 
@@ -99,16 +99,18 @@
 
 
 
-<meta name="description" content="This could be hell or this could be heaven.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hotel California">
-<meta property="og:url" content="https://2016428.com/index.html">
+<meta name="description" content="最近在抽时间看《高性能 MySQL》这本书，顺便做下笔记。  Mysql 事务介绍事务：一组原子性sql操作。特点：要么全执行，要么全部执行失败。一个良好的事务所要具备四个标准的特性：ACID 特性：原子性（atomicity）： 一个事物必须是不可分割的最小单元， 对于一个事务来说，要么全部执行成功，要么全部执行失">
+<meta name="keywords" content="mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高性能 MySQL 笔记之一 事务">
+<meta property="og:url" content="https://2016428.com/2017/11/28/mvcc/index.html">
 <meta property="og:site_name" content="Hotel California">
-<meta property="og:description" content="This could be hell or this could be heaven.">
+<meta property="og:description" content="最近在抽时间看《高性能 MySQL》这本书，顺便做下笔记。  Mysql 事务介绍事务：一组原子性sql操作。特点：要么全执行，要么全部执行失败。一个良好的事务所要具备四个标准的特性：ACID 特性：原子性（atomicity）： 一个事物必须是不可分割的最小单元， 对于一个事务来说，要么全部执行成功，要么全部执行失败，不可能只执行其中一部分。这就是事务的原子性。一致性（consistenc">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-11-29T10:49:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hotel California">
-<meta name="twitter:description" content="This could be hell or this could be heaven.">
+<meta name="twitter:title" content="高性能 MySQL 笔记之一 事务">
+<meta name="twitter:description" content="最近在抽时间看《高性能 MySQL》这本书，顺便做下笔记。  Mysql 事务介绍事务：一组原子性sql操作。特点：要么全执行，要么全部执行失败。一个良好的事务所要具备四个标准的特性：ACID 特性：原子性（atomicity）： 一个事物必须是不可分割的最小单元， 对于一个事务来说，要么全部执行成功，要么全部执行失败，不可能只执行其中一部分。这就是事务的原子性。一致性（consistenc">
 
 
 
@@ -136,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://2016428.com/"/>
+  <link rel="canonical" href="https://2016428.com/2017/11/28/mvcc/"/>
 
 
 
 
 
-  <title> Hotel California </title>
+  <title> 高性能 MySQL 笔记之一 事务 | Hotel California </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -167,9 +169,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-   page-home 
- ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -295,9 +295,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -327,10 +327,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/11/28/mvcc/" itemprop="url">
-                  高性能 MySQL 笔记之一 事务
-                </a>
+                高性能 MySQL 笔记之一 事务
               
             
           </h2>
@@ -365,135 +362,10 @@
           
 
           
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-最近在抽时间看《高性能 MySQL》这本书，顺便做下笔记。
-
-Mysql 事务介绍事务：一组原子性sql操作。特点：要么全执行，要么全部执行失败。一个良好的事务所要具备四个标准的特性：ACID 特性：原子性（atomicity）： 一个事物必须是不可分割的最小单元， 对于一个事务来说，要么全部执
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/28/mvcc/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://2016428.com/2017/11/20/trigger/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Qian">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hotel California">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/11/20/trigger/" itemprop="url">
-                  mysql触发器trigger使用
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-20T17:08:48+08:00">
-                2017-11-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
 
           
@@ -511,314 +383,144 @@ Mysql 事务介绍事务：一组原子性sql操作。特点：要么全执行�
       
 
       
+        <hr>
+<p>最近在抽时间看《高性能 MySQL》这本书，顺便做下笔记。</p>
+<hr>
+<h2 id="Mysql-事务介绍"><a href="#Mysql-事务介绍" class="headerlink" title="Mysql 事务介绍"></a>Mysql 事务介绍</h2><p>事务：一组原子性sql操作。<br>特点：要么全执行，要么全部执行失败。<br>一个良好的事务所要具备四个标准的特性：<br>ACID 特性：<br>原子性（atomicity）： 一个事物必须是不可分割的最小单元， 对于一个事务来说，要么全部执行成功，要么全部执行失败，不可能只执行其中一部分。这就是事务的原子性。<br>一致性（consistency）：事务总是从一个一致的状态转到另一个一致的状态，不可能只改变其中一部分，也还是必须全部一起改变状态。<br>隔离性（isolation）：通常来说， 一个事务在执行时对其他事务是不可见的，也就是说是一个独立的存在。具体特殊情况特殊分析，具体参考其隔离级别。<br>持久性（durability）：一旦事务提交，数据将会永久保存到数据库中。</p>
+<p>ACID 说起来容易，但是真的支持这一特性，数据库需要很复杂的实现，相比于不支持 ACID的数据库要耗费更多的资源。如果是不需要事务类的应用场景，选用不支持事务的数据库可以获得更高的性能。</p>
+<h2 id="隔离级别"><a href="#隔离级别" class="headerlink" title="隔离级别"></a>隔离级别</h2><p>四种隔离级别：</p>
+<h3 id="READ-UNCOMMITED-未提交读"><a href="#READ-UNCOMMITED-未提交读" class="headerlink" title="READ UNCOMMITED 未提交读"></a>READ UNCOMMITED 未提交读</h3><p>事务中的修改，在没有提交之前可以被读，这样容易造成脏读，简单来说，脏读就是，在一个事务请求数据库，但是还没提交的时候，另一个请求用了此数据，这样就造成了脏读。通常，未提交读会造成很多问题，而且并不会提高太多性能，所以一般不推荐使用此隔离级别。</p>
+<h3 id="READ-COMMITTED-提交读"><a href="#READ-COMMITTED-提交读" class="headerlink" title="READ COMMITTED 提交读"></a>READ COMMITTED 提交读</h3><blockquote>
+<p>MySQL 是开启自动提交的，如果要测试可以关闭自动提交，手动 commit。<br>show variables like ‘autocommit’<br>set autocommit = 0</p>
+</blockquote>
+<p>一个事务在提交之前对其它事务不可见，也就是说一个事务执行时候只对已经提交的数据进行操作。这一级别也叫做 不重复读，也就是说：两次执行同样的操作，读取的数据可能是不同的。</p>
+<p>举例： A 客户端操作<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">value</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">id</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>得到结果 1<br>这时我们 A 客户端并未提交  </p>
+<p>这时候如果我们用 B 客户端 修改 id=1的值并且提交：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">table</span> <span class="keyword">set</span> <span class="keyword">value</span>=<span class="number">10</span> <span class="keyword">where</span> <span class="keyword">id</span> = <span class="number">1</span></span><br><span class="line"><span class="keyword">commit</span>;</span><br></pre></td></tr></table></figure></p>
+<p>这时候再用 A 客户端 取 id =1 的值 得到的会是10。<br>这就是不可重复读带来的问题，两次同样的 sql 读取结果可能会出现不一致的情况。</p>
+<h3 id="REPEATABLE-READ-可重复读"><a href="#REPEATABLE-READ-可重复读" class="headerlink" title="REPEATABLE READ 可重复读"></a>REPEATABLE READ 可重复读</h3><p>可重复读避免了不可重复读的问题，也避免了脏读问题，但是同时也带来了新的问题：幻读。<br>幻读：幻读指当用户读取某一范围的数据行时，另一个事务又在该范围内插入了新行，当用户再读取该范围的数据行时，会发现有新的“幻影”行。<br></p>
+<blockquote>
+<p>mysql默认的隔离级别就是 REPEATABLE READ 可重复读</p>
+</blockquote>
+<h3 id="SERIALIZABLE-可串行化"><a href="#SERIALIZABLE-可串行化" class="headerlink" title="SERIALIZABLE  可串行化"></a>SERIALIZABLE  可串行化</h3><p> SERIALIABLE是最高的隔离级别，通过强制事务串执行，避免了幻读问题。简单来说，SERIALIABLE 会在每一行数据上加锁，所以可能导致大量的超时和锁征用问题，实际中很少用到此级别，只有对数据一致性要求极高的情况下才会使用。</p>
+<h3 id="隔离级别示意图"><a href="#隔离级别示意图" class="headerlink" title="隔离级别示意图"></a>隔离级别示意图</h3><table>
+<thead>
+<tr>
+<th>隔离级别</th>
+<th>脏读可能性</th>
+<th>不可重复读可能性</th>
+<th>幻读可能性</th>
+<th>加锁读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> READ UNCOMMITTED</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>✘</td>
+</tr>
+<tr>
+<td> READ COMMITTED</td>
+<td>✘</td>
+<td>√</td>
+<td>√</td>
+<td>✘</td>
+</tr>
+<tr>
+<td> REPEATABLE READ</td>
+<td>✘</td>
+<td>✘</td>
+<td>√</td>
+<td>✘</td>
+</tr>
+<tr>
+<td> SERIALIZALBE</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+<td>√</td>
+</tr>
+</tbody>
+</table>
+<h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><p>死锁是指两个或多个事务在同一资源上互相占用，并请求锁定对方所占用的资源，从而导致恶性循环的情况。死锁发生时候要完全或者部分回滚其中一个事务才能打破死锁。<br>死锁就是两个人迎面过独木桥，只有其中一个人返回才能打破僵局。</p>
+<blockquote>
+<p>关于锁，在 mysql 中有基本的共享锁（读锁）和排它锁（写锁），当然你也可以手动加锁，但是并不推荐，除非你关闭了自动提交。如果不关闭自动提交加锁会导致事务和锁造成@#￥%……&amp;，会发生啥我也不知道，总之不可预知，不要尝试。</p>
+</blockquote>
+<h2 id="事务日志"><a href="#事务日志" class="headerlink" title="事务日志"></a>事务日志</h2><p>事务日志可以帮助提高事务的效率，使用事务日志，存储引擎在修改表的数据时候只需要修改其内存拷贝，再把修改记录持久到硬盘日志中，不用每次将数据直接持久化到磁盘，事务日志采用追加的方式，顺序 I/O，所以效率很高。事务日志可以在后台慢慢刷回磁盘中，所以采用事务日志效率相对较高。目前大多数存储引擎都是这样实现的，我们通常称之为预写式日志，修改数据需要写两次磁盘。<br>如果数据的修改已经持久化到硬盘，但是还没写到磁盘。若中途发生意外重启，恢复后硬盘数据会恢复，具体恢复机制视搜索引擎而定。</p>
+<h2 id="MVCC-多版本并发控制"><a href="#MVCC-多版本并发控制" class="headerlink" title="MVCC 多版本并发控制"></a>MVCC 多版本并发控制</h2><p>我们看到了简单的行级锁存在诸多限制，大多数的搜索引擎实现的都不是简单的行级锁，基于提高并发性能考虑，他们一般都实现了MVCC 即多版本并发控制。因为 MVCC 并没有一个标准，所以不同的数据库的实现方式也不同。<br>MVCC 是通过保存某一个时刻的快照来实现的，也就是说，不同时间点执行的同样操作，结果可能是不同的。<br>以 InnoDB 为例，InnoDB 的 MVCC 通过保存后面两个隐藏列：开始时间（开始版本号），结束时间（结束版本号）。但是并不是存的真的时间，而是自增的版本号。</p>
+<blockquote>
+<p>SELECT<br>a.查找版本早于当前事务版本号数据行，这样可以保证数据是之前插入过的或者是事务本身插入的。<br>b.行的删除版本号要么晚于当前版本号，要么未定义，这样可以确保读取到的数据在事务开始之前未被删除。<br>INSERT<br>为新插入的每一行保存当前系统号作为行版本号。<br>DELETE<br> 为删除的每一行保存当前系统版本号作为删除标志。<br>UPDATE<br>保存当前系统版本号为版本号，同时保存当前系统版本号到原来的行作为删除标志。</p>
+</blockquote>
+<p>这两个版本号，可以使大多数操作不用加锁，操作简单，提高了性能，不足之处是每行记录都需要额外的空间，需要更多的行检查工作。<br>MVCC 只在REPEATABLE 和 READ COMMITTED 两个隔离级别下工作。其他两个隔离级别和 MVCC 都不兼容。因为 READ UNCOMMITTED 总是读取到最新的数据行而不是符合当前事务版本的数据行。而 SERIALIZABLE 则会对所有读取的行都加锁。</p>
+
+      
+    </div>
+
+    <div>
+      
         
-          
-          简介trigger 是 mysql 中的一个触发器，触发器的主要作用是在执行 mysql 之前或者之后来执行一些特定的操作。
-操作规则主要针对的 mysql 操作：insert、update、delete。
-触发的时间设定是： before （sql 执行前）、after（sql 执行之后）。
-示例
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/20/trigger/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://2016428.com/2017/11/18/note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Qian">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hotel California">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/11/18/note/" itemprop="url">
-                  简单的笔记
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-18T15:58:44+08:00">
-                2017-11-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
         
-          
-          brew 简单操作命令
-安装 vim：  brew install vim查看 brew 可升级应用：brew outdated查看 brew 安装的应用版本： brew list —versionsbrew 安装的文件默认安装到/usr/local/bin/下设置 brew 安装的 vim 为默认
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/18/note/#more" rel="contents">
-              Read more &raquo;
-            </a>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/20/trigger/" rel="next" title="mysql触发器trigger使用">
+                <i class="fa fa-chevron-left"></i> mysql触发器trigger使用
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://2016428.com/2017/11/16/first/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Qian">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hotel California">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2017/11/16/first/" itemprop="url">
-                  The first article
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-16T14:51:22+08:00">
-                2017-11-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          1print ("hello world")
-之前搭建过一个 blog，主要是看着好看，实用性并不好。
-后来在 csdn 记录，再后来就很少记录了，有一些需要记录的都记在 Notion 或者有道云笔记。
-记在本地笔记的坏处是 总是记得很随意，而写博客能对细碎的知识点重新梳理一下。
-工作之余，用 He
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/16/first/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -826,6 +528,12 @@ Mysql 事务介绍事务：一组原子性sql操作。特点：要么全执行�
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTg5My84NDU3"></div>
+    
+  </div>
+
 
         </div>
         
@@ -845,8 +553,17 @@ Mysql 事务介绍事务：一组原子性sql操作。特点：要么全执行�
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -899,6 +616,22 @@ Mysql 事务介绍事务：一组原子性sql操作。特点：要么全执行�
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql-事务介绍"><span class="nav-number">1.</span> <span class="nav-text">Mysql 事务介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隔离级别"><span class="nav-number">2.</span> <span class="nav-text">隔离级别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#READ-UNCOMMITED-未提交读"><span class="nav-number">2.1.</span> <span class="nav-text">READ UNCOMMITED 未提交读</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#READ-COMMITTED-提交读"><span class="nav-number">2.2.</span> <span class="nav-text">READ COMMITTED 提交读</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#REPEATABLE-READ-可重复读"><span class="nav-number">2.3.</span> <span class="nav-text">REPEATABLE READ 可重复读</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SERIALIZABLE-可串行化"><span class="nav-number">2.4.</span> <span class="nav-text">SERIALIZABLE  可串行化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隔离级别示意图"><span class="nav-number">2.5.</span> <span class="nav-text">隔离级别示意图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁"><span class="nav-number">3.</span> <span class="nav-text">死锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务日志"><span class="nav-number">4.</span> <span class="nav-text">事务日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVCC-多版本并发控制"><span class="nav-number">5.</span> <span class="nav-text">MVCC 多版本并发控制</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1026,6 +759,10 @@ Mysql 事务介绍事务：一组原子性sql操作。特点：要么全执行�
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
