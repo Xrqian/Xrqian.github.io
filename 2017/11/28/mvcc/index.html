@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="Hotel California">
 <meta property="og:description" content="最近在抽时间看《高性能 MySQL》这本书，顺便做下笔记。  Mysql 事务介绍事务：一组原子性sql操作。特点：要么全执行，要么全部执行失败。一个良好的事务所要具备四个标准的特性：ACID 特性：原子性（atomicity）： 一个事物必须是不可分割的最小单元， 对于一个事务来说，要么全部执行成功，要么全部执行失败，不可能只执行其中一部分。这就是事务的原子性。一致性（consistenc">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-29T10:49:34.000Z">
+<meta property="og:updated_time" content="2017-11-29T10:54:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高性能 MySQL 笔记之一 事务">
 <meta name="twitter:description" content="最近在抽时间看《高性能 MySQL》这本书，顺便做下笔记。  Mysql 事务介绍事务：一组原子性sql操作。特点：要么全执行，要么全部执行失败。一个良好的事务所要具备四个标准的特性：ACID 特性：原子性（atomicity）： 一个事物必须是不可分割的最小单元， 对于一个事务来说，要么全部执行成功，要么全部执行失败，不可能只执行其中一部分。这就是事务的原子性。一致性（consistenc">
@@ -416,23 +416,23 @@
 <tbody>
 <tr>
 <td> READ UNCOMMITTED</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
 <td>✘</td>
 </tr>
 <tr>
 <td> READ COMMITTED</td>
 <td>✘</td>
-<td>√</td>
-<td>√</td>
+<td>✔</td>
+<td>✔</td>
 <td>✘</td>
 </tr>
 <tr>
 <td> REPEATABLE READ</td>
 <td>✘</td>
 <td>✘</td>
-<td>√</td>
+<td>✔</td>
 <td>✘</td>
 </tr>
 <tr>
@@ -440,7 +440,7 @@
 <td>✘</td>
 <td>✘</td>
 <td>✘</td>
-<td>√</td>
+<td>✔</td>
 </tr>
 </tbody>
 </table>
