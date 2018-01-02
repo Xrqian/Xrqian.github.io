@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="Hotel California">
 <meta property="og:description" content="财务报表项目v1版本已上线，在此总结下。   项目简介财务报表是财务对于当天的支出收入信息进行汇总给财务总监审核，审核通过后给 Boss 看的一个报表。 项目前端分为 pc 端和 手机微信端，微信端是接入到企业号的应用，对于后端而言，没有多大区别。 根据用户不同分的权限也不同：财务员工：录入，提交审核。财务总监：审核，审核通过 or 驳回重新录入。Boss：查看（财务总监审核通过的）">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-02T06:01:53.753Z">
+<meta property="og:updated_time" content="2018-01-02T06:03:17.226Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="财务报表初版总结">
 <meta name="twitter:description" content="财务报表项目v1版本已上线，在此总结下。   项目简介财务报表是财务对于当天的支出收入信息进行汇总给财务总监审核，审核通过后给 Boss 看的一个报表。 项目前端分为 pc 端和 手机微信端，微信端是接入到企业号的应用，对于后端而言，没有多大区别。 根据用户不同分的权限也不同：财务员工：录入，提交审核。财务总监：审核，审核通过 or 驳回重新录入。Boss：查看（财务总监审核通过的）">
@@ -399,8 +399,8 @@
 <h4 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h4><p>不同身份有不同的权限， 在 user 表中添加一个身份字段，不同值代表不同身份。</p>
 <h4 id="wechat-网页授权登录"><a href="#wechat-网页授权登录" class="headerlink" title="wechat 网页授权登录"></a>wechat 网页授权登录</h4><p><a href="https://work.weixin.qq.com/api/doc#10028/%E5%85%B3%E4%BA%8EUserID%E6%9C%BA%E5%88%B6" target="_blank"> 企业微信开发者文档 </a></p>
 <p>一个标准的OAuth2认证模式。</p>
-<p>因为微信端有身份判断，所以需要获取到当前登录的用户信息。<br>根据开发者文档，除了需要传一些必要的字段之外，需要传一个 redirect url 也就是 授权成功后的跳转页面 和 stag 字段（自定义值）。 微信授权后直接带着code 字段及传入的 stag 值 （拼接在 url 中返回）去请求 redirect url，而要获取用户信息的话需要这个 code 字段和 access token 。 也就是说我们需要拿到这个 code。</p>
-<p>这里我们跟前端的处理方式是这样的：<br>1&gt; 前端传一个redirect url 到后端wechat-login 接口<br>2&gt; 后端记录 redirect url 并为其生成一个 uuid 作为对应关系保存于数据库。<br>3&gt; 后端将用 uuid 和一个新的redirect url （即后端的wechat-auth 接口）拼接为 wechat 的认证url。<br>4&gt; wechat 返回新的带有 stag 和 code 的 url 请求wechat-auth 接口，在 wechat-auth 接口中获取 code 值及 uuid 对应的原前端要重定向的 url，根据 code 获取用户信息，放到 cookie 中重定向到前端要重定向的 url。也就是说，最后在后端完成重定向，重定向到前端想要去的页面，重定向到的页面可以从 cookie 中获得后端设置的用户信息。</p>
+<p>因为微信端有身份判断，所以需要获取到当前登录的用户信息。<br>根据开发者文档，除了需要传一些必要的字段之外，需要传一个 redirect url 也就是 授权成功后的跳转页面 和 state 字段（自定义值）。 微信授权后直接带着code 字段及传入的 state 值 （拼接在 url 中返回）去请求 redirect url，而要获取用户信息的话需要这个 code 字段和 access token 。 也就是说我们需要拿到这个 code。</p>
+<p>这里我们跟前端的处理方式是这样的：<br>1&gt; 前端传一个redirect url 到后端wechat-login 接口<br>2&gt; 后端记录 redirect url 并为其生成一个 uuid 作为对应关系保存于数据库。<br>3&gt; 后端将用 uuid 和一个新的redirect url （即后端的wechat-auth 接口）拼接为 wechat 的认证url。<br>4&gt; wechat 返回新的带有 state 和 code 的 url 请求wechat-auth 接口，在 wechat-auth 接口中获取 code 值及 uuid 对应的原前端要重定向的 url，根据 code 获取用户信息，放到 cookie 中重定向到前端要重定向的 url。也就是说，最后在后端完成重定向，重定向到前端想要去的页面，重定向到的页面可以从 cookie 中获得后端设置的用户信息。</p>
 <p>ps: Django 中设置 cookie 及重定向</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponseRedirect</span><br><span class="line">res = HttpResponseRedirect(res_url)</span><br><span class="line">res.set_cookie(<span class="string">"COOKIE_TOKEN_KEY"</span>, <span class="string">"xxx"</span>)</span><br><span class="line">res.set_cookie(<span class="string">"COOKIE_USER_KEY"</span>,<span class="string">"xxxx"</span>)</span><br><span class="line"><span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
 <h4 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h4><p>MySQL 有一套加密方式，示例：</p>
