@@ -99,18 +99,18 @@
 
 
 
-<meta name="description" content="在 Flask 中有个 context 即上下文的概念。一直不是很理解，今天查阅了多方资料，有了一个基础的认识。简单的总结一下  上下文概念上下文的原文是 context，简单的理解上下文的含义是指：在处理一个请求的时候所要包含的前提条件（及后续条件）。比如我们需要在每次请求之前要知道的数据库连接信息，所在的应">
+<meta name="description" content="在 Flask 中有个 context 即上下文的概念。一直不是很理解，今天查阅了多方资料，有了一个基础的认识。简单的总结一下   上下文概念 上下文的原文是 context，简单的理解上下文的含义是指：在处理一个请求的时候所要包含的前提条件（及后续条件）。比如我们需要在每次请求之前要知道的数据库连接信息，所在">
 <meta name="keywords" content="Flask">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flask 上下文">
 <meta property="og:url" content="https://2016428.com/2018/02/05/context/index.html">
 <meta property="og:site_name" content="Hotel California">
-<meta property="og:description" content="在 Flask 中有个 context 即上下文的概念。一直不是很理解，今天查阅了多方资料，有了一个基础的认识。简单的总结一下  上下文概念上下文的原文是 context，简单的理解上下文的含义是指：在处理一个请求的时候所要包含的前提条件（及后续条件）。比如我们需要在每次请求之前要知道的数据库连接信息，所在的应用信息，用户的请求信息等。 Flask中的上下文对象RequestConte">
+<meta property="og:description" content="在 Flask 中有个 context 即上下文的概念。一直不是很理解，今天查阅了多方资料，有了一个基础的认识。简单的总结一下   上下文概念 上下文的原文是 context，简单的理解上下文的含义是指：在处理一个请求的时候所要包含的前提条件（及后续条件）。比如我们需要在每次请求之前要知道的数据库连接信息，所在的应用信息，用户的请求信息等。  Flask中的上下文对象Request">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-02-08T07:25:35.851Z">
+<meta property="og:updated_time" content="2018-02-08T07:40:05.072Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flask 上下文">
-<meta name="twitter:description" content="在 Flask 中有个 context 即上下文的概念。一直不是很理解，今天查阅了多方资料，有了一个基础的认识。简单的总结一下  上下文概念上下文的原文是 context，简单的理解上下文的含义是指：在处理一个请求的时候所要包含的前提条件（及后续条件）。比如我们需要在每次请求之前要知道的数据库连接信息，所在的应用信息，用户的请求信息等。 Flask中的上下文对象RequestConte">
+<meta name="twitter:description" content="在 Flask 中有个 context 即上下文的概念。一直不是很理解，今天查阅了多方资料，有了一个基础的认识。简单的总结一下   上下文概念 上下文的原文是 context，简单的理解上下文的含义是指：在处理一个请求的时候所要包含的前提条件（及后续条件）。比如我们需要在每次请求之前要知道的数据库连接信息，所在的应用信息，用户的请求信息等。  Flask中的上下文对象Request">
 
 
 
@@ -386,12 +386,10 @@
         <hr>
 <p>在 Flask 中有个 context 即上下文的概念。一直不是很理解，今天查阅了多方资料，有了一个基础的认识。简单的总结一下</p>
 <hr>
-<h3 id="上下文概念"><a href="#上下文概念" class="headerlink" title="上下文概念"></a>上下文概念</h3><p>上下文的原文是 context，简单的理解上下文的含义是指：在处理一个请求的时候所要包含的前提条件（及后续条件）。比如我们需要在每次请求之前要知道的数据库连接信息，所在的应用信息，用户的请求信息等。</p>
-<h3 id="Flask中的上下文对象"><a href="#Flask中的上下文对象" class="headerlink" title="Flask中的上下文对象"></a>Flask中的上下文对象</h3><h4 id="RequestContent-请求上下文"><a href="#RequestContent-请求上下文" class="headerlink" title="RequestContent  请求上下文"></a>RequestContent  请求上下文</h4><ul>
-<li>Request 请求的对象，会封装每次的 Http 请求 (environ) 的内容；<ul>
+<h3 id="上下文概念"><a href="#上下文概念" class="headerlink" title=" 上下文概念 "></a><font color="#267594"> 上下文概念 </font></h3><p>上下文的原文是 context，简单的理解上下文的含义是指：在处理一个请求的时候所要包含的前提条件（及后续条件）。比如我们需要在每次请求之前要知道的数据库连接信息，所在的应用信息，用户的请求信息等。</p>
+<h3 id="Flask中的上下文对象"><a href="#Flask中的上下文对象" class="headerlink" title=" Flask中的上下文对象"></a><font color="#267594"> Flask中的上下文对象</font></h3><h4 id="RequestContent-请求上下文"><a href="#RequestContent-请求上下文" class="headerlink" title="RequestContent  请求上下文"></a>RequestContent  请求上下文</h4><ul>
+<li>Request 请求的对象，会封装每次的 Http 请求 (environ) 的内容；</li>
 <li>Session 会根据请求中的 cookie，重新载入该访问者相关的会话信息。</li>
-</ul>
-</li>
 </ul>
 <h4 id="AppContext-应用上下文"><a href="#AppContext-应用上下文" class="headerlink" title="AppContext  应用上下文"></a>AppContext  应用上下文</h4><ul>
 <li>g 处理请求时用作临时存储的对象，每次请求都会重设这个变量；作为一个请求内的全局变量，可以在用于在装饰器 before_request() 、 after_request() 和 teardown_request() 中保存变量信息。 在0.10之后它可以作用于整个应用。 </li>
@@ -402,26 +400,26 @@
 <li>g 和 Request 的生命周期都是一个请求的周期。一个请求结束后，其生命周期也结束了。  </li>
 <li>session的生命周期取决于它是否过期用户是否关闭浏览器等，跟普通的 session 生命周期一样。</li>
 </ul>
-<h3 id="创建模式"><a href="#创建模式" class="headerlink" title="创建模式"></a>创建模式</h3><pre><code>Flask 启动时会有两种状态，开始的状态可以做些应用级的初始化；当第一个请求过来之后，就进入了另外的一个状态，具体请参考官方文档。
-</code></pre><h4 id="应用上下文"><a href="#应用上下文" class="headerlink" title="应用上下文"></a>应用上下文</h4><p>在应用上下文中，包括了 current_app、g 两个对象，一般来说，该对象有如下的两种创建方式：   </p>
+<h3 id="创建模式"><a href="#创建模式" class="headerlink" title="创建模式"></a>创建模式</h3><p>Flask 启动时会有两种状态，开始的状态可以做些应用级的初始化；当第一个请求过来之后，就进入了另外的一个状态，具体请参考官方文档。</p>
+<h4 id="应用上下文"><a href="#应用上下文" class="headerlink" title="应用上下文"></a>应用上下文</h4><p>在应用上下文中，包括了 current_app、g 两个对象，一般来说，该对象有如下的两种创建方式：   </p>
 <ul>
 <li>在处理请求的时候会自动创建；  </li>
 <li>通过 app_context() 手动创建，通常用在一些单元测试的场景中。   </li>
-<li><a herf="http://docs.jinkan.org/docs/flask/appcontext.html" target="_blank">官方文档中文介绍</a></li>
+<li><a href="http://docs.jinkan.org/docs/flask/appcontext.html" target="_blank">官方文档中文介绍</a></li>
 </ul>
 <h4 id="请求上下文"><a href="#请求上下文" class="headerlink" title="请求上下文"></a>请求上下文</h4><p>在请求上下文中，包含了 request 、 session 两个对象，同样有如下两种创建方式：</p>
 <ul>
 <li>在处理请求的时候自动创建</li>
 <li>通过app.test_request_context(‘/route?param=value’)手动创建。<br>需要注意的是，如果创建请求上下文时候，当前没有应用上下文，则会自动创建应用上下文。也就是说请求上下文一定是在应用上下文存在的基础上存在的。     </li>
-<li><a herf="http://docs.jinkan.org/docs/flask/reqcontext.html" target="_blank">官方文档中文介绍</a></li>
+<li><a href="http://docs.jinkan.org/docs/flask/reqcontext.html" target="_blank">官方文档中文介绍</a></li>
 </ul>
-<h3 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a>线程安全</h3><p>在处理 request 请求的时候，在线程或协程环境下，各线程是如何有条不紊的调用自己的变量的。</p>
+<h3 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全  "></a><font color="#267594">线程安全  </font></h3><p>在处理 request 请求的时候，在线程或协程环境下，各线程是如何有条不紊的调用自己的变量的。</p>
 <h4 id="flask-中的线程安全"><a href="#flask-中的线程安全" class="headerlink" title="flask 中的线程安全"></a>flask 中的线程安全</h4><p>在 Python 中的线程安全机制是 treadin.local(), 而 flask 中的线程安全机制是使用werkzeug中的Local 实现的。除了线程，它还支持协程。</p>
-<h4 id="flask-中定义"><a href="#flask-中定义" class="headerlink" title="flask 中定义"></a>flask 中定义</h4><p>在 flask 中，上下文的定义存在于globals.py 中。<br><a herf="https://github.com/pallets/flask/blob/master/flask/globals.py" target="_blank"> 源码链接</a></p>
+<h4 id="flask-中定义"><a href="#flask-中定义" class="headerlink" title="flask 中定义"></a>flask 中定义</h4><p>在 flask 中，上下文的定义存在于globals.py 中。<br><a href="https://github.com/pallets/flask/blob/master/flask/globals.py" target="_blank"> 源码链接</a></p>
 <h4 id="LocalProxy-和-LocalStack"><a href="#LocalProxy-和-LocalStack" class="headerlink" title="LocalProxy 和 LocalStack"></a>LocalProxy 和 LocalStack</h4><p>LocalProxy 和 LocalStack 都是werkzeug中定义的。<br>LocalProxy 是一个代理对象，它能够把接收到的请求转发给本地的local 对象，而LocalStack 则是一个模拟了堆栈实现保存与线程相关的变量，使不同线程的变量不会混淆。</p>
-<h3 id="上下文源码"><a href="#上下文源码" class="headerlink" title="上下文源码"></a>上下文源码</h3><p>上下文相关的源码在 ctx.py 中。<br><a herf="https://github.com/pallets/flask/blob/master/flask/ctx.py" target="_blank">源码链接 </a></p>
+<h3 id="上下文源码"><a href="#上下文源码" class="headerlink" title="上下文源码"></a><font color="#267594">上下文源码</font></h3><p>上下文相关的源码在 ctx.py 中。<br><a href="https://github.com/pallets/flask/blob/master/flask/ctx.py" target="_blank">源码链接 </a></p>
 <hr>
-<h4 id="参考文章，本文章更详细的叙述了有关上下文的源码及实现原理"><a href="#参考文章，本文章更详细的叙述了有关上下文的源码及实现原理" class="headerlink" title=" 参考文章，本文章更详细的叙述了有关上下文的源码及实现原理"></a><a herf="https://jin-yang.github.io/post/flask-context.html" target="_blank"> 参考文章，本文章更详细的叙述了有关上下文的源码及实现原理</a></h4><hr>
+<h4 id="参考文章，本文章更详细的叙述了有关上下文的源码及实现原理"><a href="#参考文章，本文章更详细的叙述了有关上下文的源码及实现原理" class="headerlink" title=" 参考文章，本文章更详细的叙述了有关上下文的源码及实现原理"></a><a href="https://jin-yang.github.io/post/flask-context.html" target="_blank"> 参考文章，本文章更详细的叙述了有关上下文的源码及实现原理</a></h4><hr>
 
       
     </div>
@@ -594,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#上下文概念"><span class="nav-number">1.</span> <span class="nav-text">上下文概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flask中的上下文对象"><span class="nav-number">2.</span> <span class="nav-text">Flask中的上下文对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RequestContent-请求上下文"><span class="nav-number">2.1.</span> <span class="nav-text">RequestContent  请求上下文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AppContext-应用上下文"><span class="nav-number">2.2.</span> <span class="nav-text">AppContext  应用上下文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生命周期"><span class="nav-number">2.3.</span> <span class="nav-text">生命周期</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建模式"><span class="nav-number">3.</span> <span class="nav-text">创建模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用上下文"><span class="nav-number">3.1.</span> <span class="nav-text">应用上下文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求上下文"><span class="nav-number">3.2.</span> <span class="nav-text">请求上下文</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程安全"><span class="nav-number">4.</span> <span class="nav-text">线程安全</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#flask-中的线程安全"><span class="nav-number">4.1.</span> <span class="nav-text">flask 中的线程安全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flask-中定义"><span class="nav-number">4.2.</span> <span class="nav-text">flask 中定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LocalProxy-和-LocalStack"><span class="nav-number">4.3.</span> <span class="nav-text">LocalProxy 和 LocalStack</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上下文源码"><span class="nav-number">5.</span> <span class="nav-text">上下文源码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文章，本文章更详细的叙述了有关上下文的源码及实现原理"><span class="nav-number">5.1.</span> <span class="nav-text"> 参考文章，本文章更详细的叙述了有关上下文的源码及实现原理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#上下文概念"><span class="nav-number">1.</span> <span class="nav-text"> 上下文概念 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flask中的上下文对象"><span class="nav-number">2.</span> <span class="nav-text"> Flask中的上下文对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RequestContent-请求上下文"><span class="nav-number">2.1.</span> <span class="nav-text">RequestContent  请求上下文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AppContext-应用上下文"><span class="nav-number">2.2.</span> <span class="nav-text">AppContext  应用上下文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生命周期"><span class="nav-number">2.3.</span> <span class="nav-text">生命周期</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建模式"><span class="nav-number">3.</span> <span class="nav-text">创建模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用上下文"><span class="nav-number">3.1.</span> <span class="nav-text">应用上下文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求上下文"><span class="nav-number">3.2.</span> <span class="nav-text">请求上下文</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程安全"><span class="nav-number">4.</span> <span class="nav-text">线程安全  </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#flask-中的线程安全"><span class="nav-number">4.1.</span> <span class="nav-text">flask 中的线程安全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flask-中定义"><span class="nav-number">4.2.</span> <span class="nav-text">flask 中定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LocalProxy-和-LocalStack"><span class="nav-number">4.3.</span> <span class="nav-text">LocalProxy 和 LocalStack</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上下文源码"><span class="nav-number">5.</span> <span class="nav-text">上下文源码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文章，本文章更详细的叙述了有关上下文的源码及实现原理"><span class="nav-number">5.1.</span> <span class="nav-text"> 参考文章，本文章更详细的叙述了有关上下文的源码及实现原理</span></a></li></ol></li></ol></div>
             
 
           </div>
